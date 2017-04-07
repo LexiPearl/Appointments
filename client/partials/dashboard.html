@@ -1,0 +1,25 @@
+<div ng-controller="loginController">
+<p><input type="submit" value="Log Out" ng-click="logout()"></p>
+<h1>You are logged in as: {{cookies.name}}</h1>
+<input type="text" ng-model="searchBox">
+<input type="submit" value="Search" ng-click()="Search">
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Patient Name</th>
+    <th>Complaint</th>
+  </tr>
+  <tr ng-repeat = "appointment in appointments | filter: searchBox">
+    <td>{{appointment.date | date:'longDate'}}</td>
+    <td>{{appointment.time | date:'shortTime'}}</td>
+    <td>{{appointment.name}}</td>
+    <td>{{appointment.complaint}}
+        <div ng-if="appointment.name == cookies.name">
+            <input type="submit" value="Cancel" ng-click="cancel(appointment._id)">
+        </div>
+    </td>
+  </tr>
+</table>
+<p><button><a href="#!/newAppointment">Add a New Appointment</a></button></p>
+</div>

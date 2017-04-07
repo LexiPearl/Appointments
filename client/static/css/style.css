@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    padding: 30px;
+    margin: 40px;
+    width: 700px;
+    display: block;
+    background-color: lavender;
+    overflow: scroll;
+}
+a{
+    text-decoration: none;
+}
+#heading{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+table{
+    text-align: left;
+    margin-top: 20px;
+}
+
+td{
+    padding-right: 40px;
+}
+th{
+    padding-right: 40px;
+}
+
+h1{
+    margin: 20px 0px;
+}

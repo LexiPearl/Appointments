@@ -1,0 +1,11 @@
+<div ng-controller="loginController">
+
+<h1>New Appointment</h1>
+<form>
+    <p>Date: <input id="datefield" min="" type="date"  required ng-model="newAppointment.date"></input></p>
+    <p>Time: <input type="time" min="08:00" max="17:00" required ng-model="newAppointment.time"></input></p>
+    <p>Complaint: <textarea rows="10" cols="50" minlength="10" required ng-model="newAppointment.complaint"></textarea></p>
+    <p><input type="submit" value="Add Appointment" ng-click="addAppointment()"></p>
+</form>
+<p><button><a href="#!/dashboard">Cancel</a></button>
+</div>
