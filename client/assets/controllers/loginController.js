@@ -37,10 +37,10 @@ app.controller('loginController', ['$scope', 'userFactory', '$http', '$location'
         if($scope.newAppointment.date <= todaysDate){
             alert('Appointment date must be after today!')
         }
-        if (!$scope.newAppointment.complaint){
+       else if (!$scope.newAppointment.complaint){
             alert('complaint must be at least 10 characters')
         }
-        if ($scope.newAppointment.complaint.length < 10){
+        else if ($scope.newAppointment.complaint.length < 10){
             alert('complaint must be at least 10 characters')
         }
         else{
