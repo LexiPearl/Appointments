@@ -51,7 +51,7 @@ module.exports={
                       res.json({appointments:appointments})
 
                   }
-                  if(!appointments.length){
+                 else if(!appointments.length){
                       console.log("these are the appointments on that date", appointments)
                       res.json({created:true, appointments:appointments})
                   }
